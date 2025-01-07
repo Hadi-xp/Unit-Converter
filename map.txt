@@ -1,0 +1,8 @@
+1. taking first Number as Kg{
+    grams = kg * 1000
+}
+
+
+2. converting it to grams
+3. displaying the result
+

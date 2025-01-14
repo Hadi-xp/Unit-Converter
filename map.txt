@@ -1,8 +1,16 @@
+Kg => grams
 1. taking first Number as Kg{
     grams = kg * 1000
 }
-
-
 2. converting it to grams
 3. displaying the result
+___________________________
+Km => Meters
+1. taking first Number as Km{
+    meters = km * 1000
+}
+2. converting it to meters
+3. displaying the result
+
+
 

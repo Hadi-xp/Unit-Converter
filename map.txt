@@ -19,6 +19,14 @@ GB => MB
 }
 2. converting it to MB
 3. displaying the result
+___________________________
+Miles => Km
+1. taking first Number as Miles{
+    Km = Miles * 1.60934
+}
+2. converting it to Km
+3. displaying the result
+
 
 
 

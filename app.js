@@ -107,5 +107,41 @@ if (isNaN(GB)) {
 // taking first Number as GB
 MBBtn.addEventListener('click',GBToMB);
 
+// DOM Miles to Km
+const KmBtn = document.querySelector(".KmButton");
+const KmResult = document.querySelector(".Km");
+const KmError = {
+    validError: new Error("Please enter a valid number"),
+    zeroError: new Error("Input cant be zero"),
+    negativeError: new Error("Input cant be negative")
+};
+
+// Miles => Km
+function MilesToKm(){
+    let Miles = Number(prompt("Enter the value in Miles: "));
+    // validation
+if (isNaN(Miles)) {
+    KmResult.textContent = KmError.validError.message;
+    throw KmError.validError;
+    
+} else if(Miles === 0) {
+    KmResult.textContent = KmError.zeroError.message;
+    throw KmError.zeroError;
+    
+} else if (Miles < 0){
+    KmResult.textContent = KmError.negativeError.message;
+    throw KmError.negativeError;
+}else{
+    // converting it to Km
+    let Km = Miles * 1.60934;
+
+    // displaying the result
+    KmResult.textContent = `${Miles} Miles = ${Km} Km`;
+}
+}
+
+// taking first Number as Miles
+KmBtn.addEventListener('click',MilesToKm);
+
 
 

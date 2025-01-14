@@ -12,5 +12,13 @@ Km => Meters
 2. converting it to meters
 3. displaying the result
 
+____________________________
+GB => MB
+1. taking first Number as GB{
+    MB = GB * 1024
+}
+2. converting it to MB
+3. displaying the result
+
 
 

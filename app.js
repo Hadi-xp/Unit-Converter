@@ -71,5 +71,41 @@ if (isNaN(Km)) {
 // taking first Number as Km
 metersBtn.addEventListener('click',KmToMeters);
 
+// DOM GB to MB
+const MBBtn = document.querySelector(".MBButton");
+const MBResult = document.querySelector(".MB");
+const MBError = {
+    validError: new Error("Please enter a valid number"),
+    zeroError: new Error("Input cant be zero"),
+    negativeError: new Error("Input cant be negative")
+};
+
+// GB => MB
+function GBToMB(){
+    let GB = Number(prompt("Enter the value in GB: "));
+    // validation
+if (isNaN(GB)) {
+    MBResult.textContent = MBError.validError.message;
+    throw MBError.validError;
+    
+} else if(GB === 0) {
+    MBResult.textContent = MBError.zeroError.message;
+    throw MBError.zeroError;
+    
+} else if (GB < 0){
+    MBResult.textContent = MBError.negativeError.message;
+    throw MBError.negativeError;
+}else{
+    // converting it to MB
+    let MB = GB * 1024;
+
+    // displaying the result
+    MBResult.textContent = `${GB} GB = ${MB} MB`;
+}
+}
+
+// taking first Number as GB
+MBBtn.addEventListener('click',GBToMB);
+
 
 

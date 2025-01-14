@@ -9,9 +9,7 @@ const gramsError = {
 // this prgram is a Unit converter
 
 // Kg => grams
-
-// taking first Number as Kg
-gramsBtn.addEventListener('click',()=>{
+function KgToGrams(){
     let Kg = Number(prompt("Enter the value in Kg: "));
     // validation
 if (isNaN(Kg)) {
@@ -32,7 +30,11 @@ if (isNaN(Kg)) {
     // displaying the result
     gramsResult.textContent = `${Kg} Kg = ${grams} grams`;
 }
-})
+}
+
+// taking first Number as Kg
+gramsBtn.addEventListener('click',KgToGrams);
+
 
 
 
